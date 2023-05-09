@@ -1,20 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { List, ItemList, Contact, ContactBox, Button } from "./Contacts.styled"
 
 function ContactsList({ contacts, onRemove }) {
   return (
     <div>
       {contacts.length !== 0 ? (
-        <ul>
+        <List>
           {contacts.map((contact) => {
             return (
-              <li key={contact.id}>
-                {contact.name}: {contact.number}
-                <button onClick={() => onRemove(contact.id)}>delete</button>
-              </li>
+              <ItemList key={contact.id}>
+                <ContactBox><Contact>{contact.name}:</Contact> {contact.number}</ContactBox>
+                <Button onClick={() => onRemove(contact.id)}>delete</Button>
+              </ItemList>
             );
           })}
-        </ul>
+        </List>
       ) : (
         "Your contact list is empty"
       )}

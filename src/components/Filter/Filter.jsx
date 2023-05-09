@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {FilterFild} from "./Filter.styled"
 
 function Filter({ filter, onChange }) {
   return (
     <label>
       Find contacts by name
       <br />
-      <input
+      <FilterFild
         type="text"
         name="filter"
         value={filter}
