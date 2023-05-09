@@ -8,12 +8,15 @@ class App extends React.Component {
     contacts: [],
     filter: "",
   };
-componentDidMount(){
-const saveContacts = localStorage.getItem('contacts');
-const parsedContacts = JSON.parse(saveContacts);
-this.setState ({contacts: parsedContacts});
 
-}
+componentDidMount(){
+  const saveContacts = localStorage.getItem('contacts');
+  const parsedContacts = JSON.parse(saveContacts) ?? [];
+  this.setState ({contacts: parsedContacts});
+  
+  }
+
+
 
   componentDidUpdate (prevProps, prevState){
     if(this.state.contacts !== prevState.contacts){
