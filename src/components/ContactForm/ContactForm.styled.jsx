@@ -23,7 +23,7 @@ margin-right: 5px;
 margin-buttom: 5px;
 `;
 
-export const Button = styled.button`
+export const ButtonSub = styled.button`
 margin-top: 5px;
 width: 242px;
   border: 1px solid rgba(172, 183, 192, 0.3);

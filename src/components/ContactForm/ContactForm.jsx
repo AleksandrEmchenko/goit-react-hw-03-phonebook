@@ -1,7 +1,7 @@
 import React from "react";
 import { nanoid } from "nanoid";
 import PropTypes from "prop-types";
-import { Form, ContactFild, ContactLabel, Button } from "./ContactForm.styled"
+import { Form, ContactFild, ContactLabel, ButtonSub } from "./ContactForm.styled"
 
 class ContactForm extends React.Component {
   state = {
@@ -32,10 +32,7 @@ class ContactForm extends React.Component {
       name: "",
       number: "",
     });
-        
- 
-    
-    
+   
   };
 
   render() {
@@ -56,7 +53,6 @@ class ContactForm extends React.Component {
             />
           </ContactLabel>
           <ContactLabel>
-            {" "}
             Number
             <ContactFild
               type="tel"
@@ -71,7 +67,7 @@ class ContactForm extends React.Component {
           </ContactLabel>
           </Form>
           
-          <Button type="submit">Add contact</Button>
+          <ButtonSub type="submit">Add contact</ButtonSub>
               </form>
       </div>
     );
